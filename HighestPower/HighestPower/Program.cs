@@ -24,19 +24,41 @@ namespace HighestPower
             Console.ReadKey();
         }
 
-        private static int HighestPower(int n)
+        private static Tuple<int, int> HighestPower(int n)
         {
-            int i = 0;
-            n = n - 1;
-            for (i = n; i >= 1; i--)
+            if (n <= 4 && n != 1)
             {
-                if ((int)Math.Sqrt(i) * (int)Math.Sqrt(i) == i)
+                return new Tuple<int, int>(1, -1);
+            }
+            else if (n == 1)
+            {
+                return new Tuple<int, int>(0, -1);
+            }
+
+            int output = 0;
+            int count = 0;
+            List<double> numbers = new List<double>();
+            for (int i = 2; i < n; i++)
+            {
+                for (int j = 2; j < n; j++)
                 {
-                    break;
+                    var op = Math.Pow(j, i);
+                    if (op >= n)
+                    {
+                        break;
+                    }
+
+                    var g = numbers.FirstOrDefault(x => x == op);
+                    if (g == 0)
+                    {
+                        numbers.Add(op);
+                    }
                 }
             }
 
-            return i;
+            output = (int)numbers.Max();
+
+            return new Tuple<int, int>(output, count);
         }
     }
 }
