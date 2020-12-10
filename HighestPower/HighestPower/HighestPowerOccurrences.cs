@@ -35,7 +35,13 @@ namespace HighestPower
                     if (op > output)
                     {
                         output = (int)op;
+                        count = 0;
                     }
+
+                    if (op == output)
+                    {
+                        count++;
+                    };
                 }
             }
 
