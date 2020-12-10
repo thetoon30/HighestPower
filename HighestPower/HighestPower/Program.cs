@@ -12,15 +12,21 @@ namespace HighestPower
         {
             //The input range is from 1 to 1,000,000. 
             int n = 90;
-            Console.WriteLine(n + " " + HighestPower(n));
-            n = 65;
-            Console.WriteLine(n + " " + HighestPower(n));
-            n = 81;
-            Console.WriteLine(n + " " + HighestPower(n));
-            n = 29;
-            Console.WriteLine(n + " " + HighestPower(n));
+            Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
             n = 6;
-            Console.WriteLine(n + " " + HighestPower(n));
+            Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
+            n = 65;
+            Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
+            n = 3;
+            Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
+            n = 1;
+            Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
+            n = 81;
+            Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
+            n = 29;
+            Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
+            n = 4;
+            Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
             Console.ReadKey();
         }
 
