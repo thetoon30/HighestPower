@@ -10,6 +10,20 @@ namespace HighestPower
     {
         static void Main(string[] args)
         {
+            //The input range is from 1 to 1,000,000. 
+            int n = 90;
+            
+            n = 65;
+           
+            n = 81;
+            
+            n = 29;
+           
+            n = 6;
+
+            Console.ReadKey();
         }
+
+        
     }
 }
