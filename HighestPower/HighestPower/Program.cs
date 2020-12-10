@@ -57,8 +57,14 @@ namespace HighestPower
             }
 
             output = (int)numbers.Max();
+            count = Occurrences(output);
 
             return new Tuple<int, int>(output, count);
+        }
+
+        private static int Occurrences(int output)
+        {
+            throw new NotImplementedException();
         }
     }
 }
