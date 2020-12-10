@@ -24,6 +24,19 @@ namespace HighestPower
             Console.ReadKey();
         }
 
-        
+        private static int HighestPower(int n)
+        {
+            int i = 0;
+            n = n - 1;
+            for (i = n; i >= 1; i--)
+            {
+                if ((int)Math.Sqrt(i) * (int)Math.Sqrt(i) == i)
+                {
+                    break;
+                }
+            }
+
+            return i;
+        }
     }
 }
