@@ -21,12 +21,13 @@ namespace HighestPower
 
             int output = 0;
             int count = 0;
+            double root = Math.Sqrt(n);
 
-            for (int i = 2; i < n; i++)
+            for (int i = 2; i <= root; i++)
             {
                 for (int j = 2; j < n; j++)
                 {
-                    var op = Math.Pow(j, i);
+                    double op = Math.Pow(j, i);
                     if (op >= n)
                     {
                         break;
