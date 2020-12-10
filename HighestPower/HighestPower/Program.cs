@@ -10,7 +10,7 @@ namespace HighestPower
     {
         static void Main(string[] args)
         {
-            //The input range is from 1 to 1,000,000. 
+            //The input range is from 1 to 1,000,000.
             int n = 90;
             Console.WriteLine(n + " " + HighestPowerOccurrences.Calculate(n));
             n = 6;
@@ -30,6 +30,8 @@ namespace HighestPower
             Console.ReadKey();
         }
 
+
+        #region Old Code not use
         private static Tuple<int, int> HighestPower(int n)
         {
             if (n <= 4 && n != 1)
@@ -84,5 +86,6 @@ namespace HighestPower
 
             return val;
         }
+        #endregion
     }
 }
