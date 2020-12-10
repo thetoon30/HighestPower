@@ -21,9 +21,25 @@ namespace HighestPower
 
             int output = 0;
             int count = 0;
-            
+
+            for (int i = 2; i < n; i++)
+            {
+                for (int j = 2; j < n; j++)
+                {
+                    var op = Math.Pow(j, i);
+                    if (op >= n)
+                    {
+                        break;
+                    }
+
+                    if (op > output)
+                    {
+                        output = (int)op;
+                    }
+                }
+            }
+
             return new Tuple<int, int>(output, count);
         }
-
     }
 }
