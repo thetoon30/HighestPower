@@ -62,9 +62,21 @@ namespace HighestPower
             return new Tuple<int, int>(output, count);
         }
 
-        private static int Occurrences(int output)
+        private static int Occurrences(int n)
         {
-            throw new NotImplementedException();
+            int val = 0;
+
+            for (int i = 2; i < n; i++)
+            {
+                double logarithm = Math.Log(n) / Math.Log(i);
+                double f = logarithm % 1;
+                if (f == 0)
+                {
+                    val++;
+                }
+            }
+
+            return val;
         }
     }
 }
